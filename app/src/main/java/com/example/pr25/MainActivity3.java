@@ -17,6 +17,7 @@ public class MainActivity3 extends Activity {
     public void onClickStart(View v) {
         startService(new Intent("com.example.servicekiller.MyService3").putExtra("name", "value"));
     }
+
     public void startNewActivity (View v){
         Intent intent = new Intent(this, MainActivity3.class);
         startActivity(intent);

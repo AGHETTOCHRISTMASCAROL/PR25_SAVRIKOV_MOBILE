@@ -10,6 +10,7 @@
         android:layout_height="wrap_content"
         android:text="">
     </TextView>
+
     <TextView
         android:id="@+id/tvTask2"
         android:layout_width="fill_parent"

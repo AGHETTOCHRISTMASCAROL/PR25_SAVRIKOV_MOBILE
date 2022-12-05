@@ -84,7 +84,6 @@ public class MainActivity4 extends Activity {
                     break;
             }
         }
-
         // Ловим сообщения об окончании задач
         if (resultCode == STATUS_FINISH) {
             int result = data.getIntExtra(PARAM_RESULT, 0);

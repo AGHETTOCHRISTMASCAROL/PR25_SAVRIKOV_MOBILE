@@ -10,6 +10,7 @@
         android:layout_height="wrap_content"
         android:onClick="onClickStart"
         android:text="@string/start">
+
     </Button>
     <Button
         android:id="@+id/NextAct"

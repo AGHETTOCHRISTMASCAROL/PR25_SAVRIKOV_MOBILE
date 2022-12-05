@@ -13,6 +13,7 @@ import android.util.Log;
 
 public class MyService4 extends Service {
 
+
     final String LOG_TAG = "myLogs";
     ExecutorService es;
 

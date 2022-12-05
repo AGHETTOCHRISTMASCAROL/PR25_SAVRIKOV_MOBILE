@@ -19,6 +19,7 @@ public class MainActivity2 extends Activity {
         startService(new Intent(this, MyService.class).putExtra("time", 2));
         startService(new Intent(this, MyService.class).putExtra("time", 4));
     }
+
     public void startNewActivity (View v){
         Intent intent = new Intent(this, MainActivity3.class);
         startActivity(intent);

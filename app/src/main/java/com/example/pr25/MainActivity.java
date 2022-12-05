@@ -16,7 +16,6 @@ public class MainActivity extends Activity{
 
     }
 
-
     public void onClickStart(View v) {
         startService(new Intent(this, MyService.class));
     }
