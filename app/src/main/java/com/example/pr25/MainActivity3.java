@@ -19,7 +19,7 @@ public class MainActivity3 extends Activity {
     }
 
     public void startNewActivity (View v){
-        Intent intent = new Intent(this, MainActivity3.class);
+        Intent intent = new Intent(this, MainActivity4.class);
         startActivity(intent);
     }
 }

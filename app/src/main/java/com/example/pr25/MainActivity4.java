@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
 public class MainActivity4 extends Activity {
@@ -27,6 +28,7 @@ public class MainActivity4 extends Activity {
     TextView tvTask2;
     TextView tvTask3;
 
+
     /** Called when the activity is first created. */
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -43,23 +45,24 @@ public class MainActivity4 extends Activity {
     public void onClickStart(View v) {
         PendingIntent pi;
         Intent intent;
+        Intent intent1 = new Intent();
 
         // Создаем PendingIntent для Task1
-        pi = createPendingResult(TASK1_CODE, null, 0);
+        pi = createPendingResult(TASK1_CODE, intent1, 0);
         // Создаем Intent для вызова сервиса, кладем туда параметр времени
         // и созданный PendingIntent
-        intent = new Intent(this, MyService.class).putExtra(PARAM_TIME, 7)
+        intent = new Intent(this, MyService4.class).putExtra(PARAM_TIME, 7)
                 .putExtra(PARAM_PINTENT, pi);
         // стартуем сервис
         startService(intent);
 
-        pi = createPendingResult(TASK2_CODE, null, 0);
-        intent = new Intent(this, MyService.class).putExtra(PARAM_TIME, 4)
+        pi = createPendingResult(TASK2_CODE, intent1, 0);
+        intent = new Intent(this, MyService4.class).putExtra(PARAM_TIME, 4)
                 .putExtra(PARAM_PINTENT, pi);
         startService(intent);
 
-        pi = createPendingResult(TASK3_CODE, null, 0);
-        intent = new Intent(this, MyService.class).putExtra(PARAM_TIME, 6)
+        pi = createPendingResult(TASK3_CODE, intent1, 0);
+        intent = new Intent(this, MyService4.class).putExtra(PARAM_TIME, 6)
                 .putExtra(PARAM_PINTENT, pi);
         startService(intent);
     }
